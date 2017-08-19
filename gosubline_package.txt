@@ -1,0 +1,33 @@
+-- install package : gofmt, gosubline
+Gosublime.sublime-setting
+
+{
+    "env": {
+        "GOPATH": "/home/ngochoang/workspace/go",
+        "GOROOT": "/usr/lib/go-1.6"
+    },
+    "on_save":
+    [{
+        "cmd": "gs9o_open", "args": {
+            "run": ["clear"],
+            "focus_view": false
+        }
+    },
+    {
+        "cmd": "gs9o_open", "args": {
+            "run": ["sh", "go build"],
+            "focus_view": false
+        }
+    },
+    {
+        "cmd": "gs9o_open", "args": {
+            "run": ["sh", "go vet"],
+            "focus_view": false
+        }
+    }],
+    "fmt_enabled": true,
+    "fmt_tab_indent": true,
+    "fmt_tab_width": 8,
+    "fmt_cmd": ["goimports"]
+}
+
